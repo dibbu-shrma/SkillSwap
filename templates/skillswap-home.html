@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillSwap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,800;1,900&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="static/skillswap-home.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#" class="logo">SkillSwap</a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Browse skill</a></li>
+      <li><a href="#">Offer skill</a></li>
+      <li><a href="#">Request skill</a></li>
+    </ul>
+    <a href="skillswap-login.html" class="btn-login">Login/Signup</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div>
+      <h1>Exchange Skills,<br>Learn Anything.</h1>
+      <p>
+        Find the skills you need. Share the skills you have.<br>
+        Connect with classmates to learn and share valuable skills.
+      </p>
+      <a href="skillswap-login.html" class="btn-start">Get Started</a>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section class="how">
+    <h2>How SkillSwap Works:</h2>
+    <p class="subtitle">Start learning and sharing skills in three simple steps.</p>
+
+    <div class="cards-wrapper">
+      <div class="cards-grid">
+
+        <div class="card-col">
+          <h3>Offer a skill:</h3>
+          <div class="card card-1">
+            Add skills you can teach. Share your knowledge with others
+            and help them grow. Set your skill level and availability
+            to start teaching.
+          </div>
+        </div>
+
+        <div class="card-col">
+          <h3>Find a Skill:</h3>
+          <div class="card card-2">
+            Browse skills from others. Explore a variety of skills
+            offered by the community. Discover people who can help
+            you learn something new.
+          </div>
+        </div>
+
+        <div class="card-col">
+          <h3>Swap &amp; Learn:</h3>
+          <div class="card card-3">
+            Connect and exchange knowledge. Send skill swap requests
+            and collaborate with others. Learn new skills while sharing
+            the ones you already know.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#">About us</a>
+    <a href="#">Contact</a>
+    <a href="#">GitHub</a>
+  </footer>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 0); // ensures scroll resets after browser restores position
+});
+</script>
+
+</body>
+</html>

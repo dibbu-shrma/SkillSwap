@@ -1,0 +1,209 @@
+/* ── Reset ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Alkatra', sans-serif;
+    background: #0a0a0a;
+    color: white;
+}
+
+/* ── NAVBAR ── */
+nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 65px;
+    background: #0a0a0a;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Alkatra', sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover { 
+    text-decoration: underline;
+    color: #4dd9e0;
+}
+
+.btn-login {
+    background: #4dd9e0;
+    color: #0a0a0a;
+    border: none;
+    padding: 0.55rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-login:hover { background: #2bbcc4; }
+
+/* ── HERO ── */
+.hero {
+    min-height: 100vh;
+    padding-top: 65px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #0d0d3b 40%, #2a2aff 100%);
+    display: flex;
+    align-items: center;
+    padding-left: 6%;
+}
+
+.hero h1 {
+    font-family: 'Alkatra', sans-serif;
+    font-style: italic;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: rgba(255,255,255,0.75);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.btn-start {
+    display: inline-block;
+    background: #4dd9e0;
+    color: #0a0a0a;
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.25s;
+}
+
+.btn-start:hover {
+    background: #2bbcc4;
+    box-shadow: 0 2px 5px #a3c8df; 
+    transform: translateY(-2px);
+}
+
+/* ── HOW IT WORKS ── */
+.how {
+    background: white;
+    color: #0a0a0a;
+    padding: 5rem 5%;
+}
+
+.how h2 {
+    font-family: 'Alkatra', sans-serif;
+    font-style: italic;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 0.4rem;
+}
+
+.how .subtitle {
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+/* white box with shadow that wraps the 3 cards */
+.cards-wrapper {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 40px rgba(0,0,0,0.12);
+    padding: 3rem 2rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card-col {
+    text-align: center;
+}
+
+.card-col h3 {
+    font-family: 'Alkatra', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #0a0a0a;
+    transition: transform 0.25s, translateY 0.25s ;
+}
+
+.card-col:hover h3{
+    transform: translateY(-5px) scale(1.25);
+    
+}
+.card {
+    box-shadow: 0 4px 40px rgba(4, 28, 77, 0.5);
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+    color: white;
+    line-height: 1.75;
+    font-size: 0.95rem;
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s,box-shadow 0.25s;
+}
+/* makes the card pop up when clicked */
+.card:hover{
+    box-shadow: 0 4px 40px rgba(4, 28, 77,0.7);
+    transform: translateY(-10px);
+}
+
+/* each card gets a slightly different blue shade */
+.card-1 { background: linear-gradient(160deg, #0e0e50, #1a1aaa); }
+.card-2 { background: linear-gradient(160deg, #0e0e50, #3131cf); }
+.card-3 { background: linear-gradient(160deg, #11116b, #3333ee); }
+
+/* ── FOOTER ── */
+footer {
+    background: #0a0a0a;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+footer a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+footer a:hover { 
+    text-decoration: underline;
+    color: #4dd9e0; 
+}
+
+/* ── Responsive (mobile) ── */
+@media (max-width: 700px) {
+    .nav-links { display: none; }
+    .cards-grid { grid-template-columns: 1fr; }
+    footer { gap: 2rem; flex-wrap: wrap; }
+}
